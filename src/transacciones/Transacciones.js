@@ -5,7 +5,7 @@ import { NumericFormat } from 'react-number-format';
 import { Link } from 'react-router-dom';
 
 export default function Transacciones() {
-    const urlBase = "http://localhost:8080/transaccion/todas";
+    const urlBase = "https://backend-api-eternal-app.onrender.com/transaccion/todas";
 
     const[transaccion,setTransaccion] = useState([]);
 
@@ -21,19 +21,19 @@ export default function Transacciones() {
     }
     const productosVendidos = async(event) => {
         event.preventDefault();
-        const resultado = await axios.get("http://localhost:8080/producto/vendidos");
+        const resultado = await axios.get("https://backend-api-eternal-app.onrender.com/producto/vendidos");
         //setProducto(resultado.data);
         console.log(resultado.data);
     }
     const productosDisponibles = async(event) => {
         event.preventDefault();
-        const resultado = await axios.get("http://localhost:8080/producto/disponibles");
+        const resultado = await axios.get("https://backend-api-eternal-app.onrender.com/producto/disponibles");
         //setProducto(resultado.data);
         console.log(resultado.data);
     }
     const transaccionTipo = async(tipo) =>{
         console.log({tipo})
-        const resultado = await axios.post("http://localhost:8080/transaccion/tipo",{tipo});
+        const resultado = await axios.post("https://backend-api-eternal-app.onrender.com/transaccion/tipo",{tipo});
         setTransaccion(resultado.data);
         console.log(resultado.data);
 

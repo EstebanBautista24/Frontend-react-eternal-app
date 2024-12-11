@@ -4,7 +4,7 @@ import { NumericFormat } from 'react-number-format';
 import { useNavigate, useParams } from 'react-router-dom';
 
 export default function VenderProducto() {
-    const urlBase = "http://localhost:8080/producto";
+    const urlBase = "https://backend-api-eternal-app.onrender.com/producto";
     const {id} = useParams();
     let navegacion = useNavigate();
     const [productos, setCampos] = useState([{ nombre: '', valor: '', precioEnvio: '' }]);
@@ -46,7 +46,7 @@ export default function VenderProducto() {
        
         console.log(envio)
         try {
-            const response = await axios.post(`http://localhost:8080/venta/${id}`, envio);
+            const response = await axios.post(`https://backend-api-eternal-app.onrender.com/venta/${id}`, envio);
             console.log('Respuesta del servidor:', response.data);
             navegacion('/productos'); // Redirige a la lista de productos o a la página que desees
         } catch (error) {

@@ -4,7 +4,7 @@ import { NumericFormat } from 'react-number-format';
 import { useNavigate, useParams } from 'react-router-dom';
 
 export default function EditarProducto() {
-    const urlBase = "http://localhost:8080/producto";
+    const urlBase = "https://backend-api-eternal-app.onrender.com/producto";
     const {id} = useParams();
     let navegacion = useNavigate();
     const [productos, setCampos] = useState([{ nombre: '', valor: '', precioEnvio: '' }]);

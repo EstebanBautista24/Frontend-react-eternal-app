@@ -6,7 +6,7 @@ import { NumericFormat } from 'react-number-format';
 import { Link } from 'react-router-dom';
 
 export default function ListarPrestamos() {
-    const urlBase = "http://localhost:8080/prestamo/todos";
+    const urlBase = "https://backend-api-eternal-app.onrender.com/prestamo/todos";
 
     const[prestamo,setPrestamo] = useState([]);
 
@@ -22,13 +22,13 @@ export default function ListarPrestamos() {
     }
     const prestamosInactivos = async(event) => {
         event.preventDefault();
-        const resultado = await axios.get("http://localhost:8080/prestamo/inactivos");
+        const resultado = await axios.get("https://backend-api-eternal-app.onrender.com/prestamo/inactivos");
         setPrestamo(resultado.data);
         console.log(resultado.data);
     }
     const prestamosActivos = async(event) => {
         event.preventDefault();
-        const resultado = await axios.get("http://localhost:8080/prestamo/activos");
+        const resultado = await axios.get("https://backend-api-eternal-app.onrender.com/prestamo/activos");
         setPrestamo(resultado.data);
         console.log(resultado.data);
     }

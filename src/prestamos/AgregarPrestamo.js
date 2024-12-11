@@ -4,7 +4,7 @@ import { NumericFormat } from 'react-number-format';
 import { useNavigate } from 'react-router-dom';
 
 export default function AgregarPrestamo() {
-    const urlBase = "http://localhost:8080/prestamo";
+    const urlBase = "https://backend-api-eternal-app.onrender.com/prestamo";
     let navegacion = useNavigate();
 
   

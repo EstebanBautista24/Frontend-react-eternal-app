@@ -13,15 +13,15 @@ export default function Dashboard() {
     cargarGasto();
 },[]);
 const cargarGasto = async()=>{
-  const resultado = await axios.get("http://localhost:8080/transaccion/gasto")
+  const resultado = await axios.get("https://backend-api-eternal-app.onrender.com/transaccion/gasto")
   setGasto(resultado.data)
 }
 const cargarVenta = async()=>{
-  const resultado = await axios.get("http://localhost:8080/balance");
+  const resultado = await axios.get("https://backend-api-eternal-app.onrender.com/balance");
   setBalance(resultado.data)
 }
 const cargarProductos  = async () => {
-    const resultado = await axios.get("http://localhost:8080/venta/gananciaMes");
+    const resultado = await axios.get("https://backend-api-eternal-app.onrender.com/venta/gananciaMes");
     setGanancia(resultado.data);
     console.log(resultado.data);
     

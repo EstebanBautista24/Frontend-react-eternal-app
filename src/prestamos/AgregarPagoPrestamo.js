@@ -4,7 +4,7 @@ import { NumericFormat } from 'react-number-format';
 import { useNavigate, useParams } from 'react-router-dom';
 
 export default function AgregarPagoPrestamo() {
-    const urlBase = "http://localhost:8080/prestamo/todos";
+    const urlBase = "https://backend-api-eternal-app.onrender.com/prestamo/todos";
     const {id} = useParams();
     let navegacion = useNavigate();
     const[prestamo,setPrestamo] = useState([]);
@@ -19,7 +19,7 @@ export default function AgregarPagoPrestamo() {
   },[]);
 
   const cargarPrestamos  = async () => {
-      const resultado = await axios.get(`http://localhost:8080/prestamo/${id}`);
+      const resultado = await axios.get(`https://backend-api-eternal-app.onrender.com/prestamo/${id}`);
       setPrestamo(resultado.data);
       console.log(resultado.data);
       
@@ -43,7 +43,7 @@ export default function AgregarPagoPrestamo() {
        
         console.log(pago)
         try {
-            const response = await axios.post(`http://localhost:8080/pagoPrestamo/${id}`, pago);
+            const response = await axios.post(`https://backend-api-eternal-app.onrender.com/pagoPrestamo/${id}`, pago);
             console.log('Respuesta del servidor:', response.data);
             navegacion('/prestamos'); // Redirige a la lista de productos o a la página que desees
         } catch (error) {

@@ -4,7 +4,7 @@ import { NumericFormat } from 'react-number-format';
 import { useNavigate, useParams } from 'react-router-dom';
 
 export default function AgregarTransaccion() {
-    const urlBase = "http://localhost:8080/transaccion";
+    const urlBase = "https://backend-api-eternal-app.onrender.com/transaccion";
     let navegacion = useNavigate();
 
   

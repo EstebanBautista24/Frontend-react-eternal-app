@@ -46,7 +46,7 @@ export default function
         fecha: fecha,
         productos: productos
       }; 
-      const urlBase = "http://localhost:8080/pedido";
+      const urlBase = "https://backend-api-eternal-app.onrender.com/pedido";
       await axios.post(urlBase,pedido);
       navegacion("/productos")
    

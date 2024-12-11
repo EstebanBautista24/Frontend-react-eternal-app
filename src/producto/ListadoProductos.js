@@ -5,7 +5,7 @@ import { NumericFormat } from 'react-number-format';
 import { Link } from 'react-router-dom';
 
 export default function ListadoProductos() {
-    const urlBase = "http://localhost:8080/producto/todos";
+    const urlBase = "https://backend-api-eternal-app.onrender.com/producto/todos";
 
     const[productos,setProducto] = useState([]);
     const[busqueda,setBusqueda] = useState([""])
@@ -39,13 +39,13 @@ export default function ListadoProductos() {
     }
     const productosVendidos = async(event) => {
         event.preventDefault();
-        const resultado = await axios.get("http://localhost:8080/producto/vendidos");
+        const resultado = await axios.get("https://backend-api-eternal-app.onrender.com/producto/vendidos");
         setProducto(resultado.data);
         console.log(resultado.data);
     }
     const productosDisponibles = async(event) => {
         event.preventDefault();
-        const resultado = await axios.get("http://localhost:8080/producto/disponibles");
+        const resultado = await axios.get("https://backend-api-eternal-app.onrender.com/producto/disponibles");
         setProducto(resultado.data);
         console.log(resultado.data);
     }
