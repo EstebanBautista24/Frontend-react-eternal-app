@@ -39,7 +39,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "proxy": "https://backend-api-eternal-app.onrender.com",
-  "start": "HOST=0.0.0.0 react-scripts start"
+  }
 }
